@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lottery-user</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+
+  <style type="text/css">
+		#lotteryGame:hover {
+			background-color: black;
+		}
+		#user:hover {
+			background-color: black;
+		}
+		#mainmenu:hover {
+			background-color: black;
+		}
+
+	</style>
+</head>
+<body style="background-color: #b3e0ff">
+  <nav class="navbar navbar-inverse" style="background-color: black" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" style="color: white">CryptoLottery</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li id="lotteryGame"><a style="color: white">Lottery Game</a></li>
+
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li id="user"><a href="#"><span class="glyphicon glyphicon-user"></span> Arjit</a></li>
+      <li id="mainmenu"><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Main Menu</a></li>
+    </ul>
+  </div>
+</nav>
+  <div class="lottery-wrapper">
+    <div class="users-corner container">
+      <div>
+        <h3 class="bold" style="color: black">User Account:</h3>  <span id="user-account"> </span>
+      </div>
+      <div>
+        <h3 class="bold" style="color: black">Your Balance:</h3> <span id="user-balance"></span>
+      </div>
+      <div>
+        <h3 class="bold" style="color: black">Total Tokens Left:</h3> <span id="user-tokens"></span>
+      </div>
+      <div>
+        <h3 class="bold" style="color: black">Tickets:</h3> <span id="user-guesses"> </span>
+      </div>
+      <div>
+        <h2 style="color: black">Buy Tokens</h2>
+        <form>
+          <input id="token-amount" type="number" min="1" max="1000000">
+          <button onclick="return buyTokens()" class="btn btn-primary" id="token-amount-btn"> Buy </button>
+        </form>
+      </div>
+      <div>
+        <h2 style="color: black"> Generate Tickets </h2>
+        <form>
+         <input id="user-guess" type="number" min="1" max="1000000">
+          <button onclick="return makeGuess()" class="btn btn-primary" id="user-guess-btn"> Generate Tickets </button>
+        </form>
+      </div>
+      <div>
+      	<h3 class="bold" style="color: black">Winning Ticket: </h3>
+      </div>
+    </div>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <!--<script src="C://Users//ARJIT MITTAL//Desktop//frontEnd//mainPage//stylesheets//app.js"></script>-->
+</body>
+</html>

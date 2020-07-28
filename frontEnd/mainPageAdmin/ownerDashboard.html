@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lottery-owner</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+
+  <style type="text/css">
+		#lotteryGame:hover {
+			background-color: black;
+		}
+		#user:hover {
+			background-color: black;
+		}
+		#mainmenu:hover {
+			background-color: black;
+		}
+
+	</style>
+</head>
+<body style="background-color: #b3e0ff">
+  <nav class="navbar navbar-inverse" style="background-color: black" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" style="color: white">CryptoLottery</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li id="lotteryGame"><a style="color: black">Lottery Game</a></li>
+
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li id="user"><a href="#"><span class="glyphicon glyphicon-user"></span> Owner</a></li>
+      <li id="mainmenu"><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Main Menu</a></li>
+    </ul>
+  </div>
+</nav>
+  <div class="lottery-wrapper">
+    <div class="owner-corner container">
+
+      <h2 class="bold">
+      <div>
+        <h3 class="bold">Your Account:</h3>  <span id="owner-account"> </span>
+      </div>
+      <div>
+        <h3 class="bold">Your Balance:</h3> <span id="owner-balance"></span>
+      </div>
+
+      <button class="btn btn-primary">Participants</button> <span id="participantInGame"></span>
+
+      <button onclick="return closeGame()" class="btn btn-primary close-game-btn"> Close Game </button>
+
+      <div class="winner-info display-none">
+        <h2 style="color: black"> Close Game Info: </h2>
+        <div>
+          <div>
+            <h3 class="bold">Winner:</h3> <span id="winner-address"> </span>
+          </div>
+          <div>
+            <h3 class="bold">Winning Ticket:</h3> <span id="winning-guess"></span>
+          </div>
+          <div class="transfer-funds-container">
+            <button class="btn btn-primary" id="transfer-funds-btn" onclick="return transferFunds()"> Transfer Funds </button>
+          </div>
+        </div>
+      </div>
+      
+
+
+    </div>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+ 
+</body>
+</html>
